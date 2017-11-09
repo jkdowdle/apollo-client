@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Search from '../recompose/Search'
 import AllUsers from '../recompose/AllUsers'
+import Form from '../recompose/Form'
 
 export const Nav = () => {
   return (
@@ -18,7 +19,7 @@ export const Nav = () => {
         <Link to="/search" >Search</Link>
       </li>
       <li>
-        <Link to="/" >Other</Link>
+        <Link to="/form" >Form</Link>
       </li>
     </ul>
   )
@@ -32,6 +33,7 @@ class App extends Component {
           {/* <Route path="/" exact component={UsersList} /> */}
           {/* <Route path="/add-user" component={AddUser} /> */}
           <Route path="/search" component={Search} />
+          <Route path="/form" component={Form} />
           <Route exact path="/" component={AllUsers} />
           {/* <Route path="/" component={UsersList} />             */}
         </div>

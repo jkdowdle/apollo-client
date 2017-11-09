@@ -19,6 +19,7 @@ export const searchUsers = gql`
 
 const data = graphql(searchUsers, {
   options: ({ input }) => ({
+    fetchPolicy: 'cache-and-network',
     variables: { input }
   })
 })
