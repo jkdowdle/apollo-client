@@ -1,5 +1,6 @@
 import React from 'react'
 import { compose, branch, renderComponent, withState, withHandlers } from 'recompose'
+import { Link } from 'react-router-dom'
 
 import EditUser from './EditUser'
 
@@ -18,10 +19,10 @@ const displayEditing = branch(
   renderComponent(EditUser)
 )
 
-export const UserComponent = ({ firstName, age, toggleEdit }) => {
+export const UserComponent = ({ id, firstName, age, toggleEdit }) => {
   return (
     <li>
-      {firstName} - {age} - <button onClick={toggleEdit}>Edit</button>
+      <Link to={`/user/${id}`}>{firstName}</Link> - {age} - <button onClick={toggleEdit}>Edit</button>
     </li>
   )
 }
