@@ -1,24 +1,17 @@
 import React from 'react'
-import { compose } from 'recompose'
+import { compose, branch, renderComponent  } from 'recompose'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
+import DataLoading from './DataLoading'
+import User from './User'
 
+const displayLoadingState = branch(
+  ({ data: { loading }}) => loading,
+  renderComponent(DataLoading)
+)
 
-export const UserDetailComponent = ({ data: { loading, user: { firstName } } }) => {
-  if (loading) {
-    return "Loading..."
-  }
-  
-  // console.log(firstName && firstName)
-  /* <h2>{firstName && firstName}</h2> */
-  /* <b>{age && age}</b> */
-  return (
-    <div>
-      <code>{JSON.stringify(firstName)}</code>
-    </div>
-  )
-}
+export const UserDetailComponent = ({ data: { loading, user: { firstName, age, ...props } } }) => <User firstName={firstName} age={age} {...props} detail />
 
 const getUser = gql`
   query User($input: Id!) {
@@ -30,12 +23,9 @@ const getUser = gql`
   }
 `
 
-const options = ({ match: { params: input } }) => {
-  console.log('input', input)
-  return {
-    variables: { input }
-  }
-}
+const options = ({ match: { params: input } }) => ({
+  variables: { input }
+})
 
 export const data = graphql(
   getUser,
@@ -43,7 +33,8 @@ export const data = graphql(
 )
 
 export const UserDetail = compose(
-  data
+  data,
+  displayLoadingState
 )(UserDetailComponent)
 
 export default UserDetail

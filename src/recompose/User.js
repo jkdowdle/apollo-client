@@ -3,8 +3,9 @@ import { compose, branch, renderComponent, withState, withHandlers } from 'recom
 import { Link } from 'react-router-dom'
 
 import EditUser from './EditUser'
+import UserInfo from './UserInfo'
 
-const edit = withState('edit', 'setEdit', false)
+const edit = withState('edit', 'setEdit', ({ edit = false }) => edit)
 
 const toggleEdit = ({ setEdit, edit }) => (event) => {
   setEdit(!edit)
@@ -19,6 +20,11 @@ const displayEditing = branch(
   renderComponent(EditUser)
 )
 
+const displayUserDetail = branch(
+  ({ detail }) => detail,
+  renderComponent(UserInfo)
+)
+
 export const UserComponent = ({ id, firstName, age, toggleEdit }) => {
   return (
     <li>
@@ -31,6 +37,7 @@ const User = compose(
   edit,
   handlers,
   displayEditing,
+  displayUserDetail
 )(UserComponent)
 
 export default User
