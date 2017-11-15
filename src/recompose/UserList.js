@@ -9,7 +9,7 @@ const displayLoadingState = branch(
   renderComponent(DataLoading)
 )
 
-export const UsersListPure = ({ users }) => {
+export const UsersListPure = ({ users = [] }) => {
   return (
     <ul>
       {users.map(({ id, ...props }) => <User key={id} id={id} {...props} />)}

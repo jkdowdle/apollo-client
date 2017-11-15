@@ -7,17 +7,6 @@ const link = new HttpLink({
   uri: `http://${process.env.REACT_APP_SERVER_HOST}:${process.env.REACT_APP_SERVER_PORT}/graphql`
 })
 
-// const latencyMiddleware = new ApolloLink((operation, forward) => {
-//   // console.log('operation', operation)
-//   // console.log('forward', forward)
-//   setTimeout(() => {
-//     console.log('latency')
-//     forward(operation)
-//   }, 1500)
-
-//   // return forward(operation)
-// })
-
 const dataIdFromObject = item => item.id
 const cache = new InMemoryCache({ dataIdFromObject })
 

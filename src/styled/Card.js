@@ -1,0 +1,24 @@
+import React from 'react'
+
+import {
+  Card,
+  CardImg,
+  CardDetail,
+  CardLabel,
+  CardText
+} from './index'
+
+export const CardComp = () => {
+  return (
+    <Card>
+      <CardImg src="data:image/png;base64,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" alt=""/>
+      <CardDetail>
+        <CardLabel>Elit Officiis Nihil</CardLabel>
+        <CardText>Lorem ipsum dolor sit amet consectetur adipisicing elit.</CardText>
+        <CardText>Officiis sapiente porro ut assumenda nihil eius incidunt repellat.</CardText>
+      </CardDetail>
+    </Card>
+  )
+}
+
+export default CardComp

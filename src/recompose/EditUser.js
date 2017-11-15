@@ -10,10 +10,10 @@ const updateInput = ({ input, setInput }) => ({ target: { name, value } }) => se
 
 const updateUser = ({ updateUser, input, id, toggleEdit }) => () => {
   return updateUser({ ...input, id })
-    .then((res) => toggleEdit())
+    .then((res) => toggleEdit && toggleEdit())
 }
 
-const handlersTwo = withHandlers({
+const handlers = withHandlers({
   updateInput,
   updateUser
 })
@@ -100,7 +100,7 @@ const EditUser = compose(
   input,
   mutation,
   mutationTwo,
-  handlersTwo,
+  handlers,
 )(EditUserComponent)
 
 export default EditUser
