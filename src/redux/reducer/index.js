@@ -1,4 +1,4 @@
-import { UPDATE_SEARCH_TERM } from '../actions'
+import { UPDATE_SEARCH } from '../actions'
 
 const defaultState = {
   searchTermInput: {
@@ -9,7 +9,7 @@ const defaultState = {
 
 export const users = (state = defaultState, action) => {
   switch (action.type) {
-    case UPDATE_SEARCH_TERM:
+    case UPDATE_SEARCH:
       console.log('action', action)
       return {
         ...state,

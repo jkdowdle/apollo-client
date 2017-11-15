@@ -10,14 +10,4 @@ export const UsersQuery = gql`
   }
 `
 
-// export const usersList = gql`
-//   query UsersList {
-//   users {
-//     id
-//     firstName
-//     age
-//   }
-// }
-// `
-
 export default UsersQuery

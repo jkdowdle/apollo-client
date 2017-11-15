@@ -8,9 +8,9 @@ import UserSearch from './UserSearch'
 
 const mapStateToProps = ({ users: { searchTermInput } }) => ({ inputVal: searchTermInput })
 const mapDispatchToProps = (dispatch) => {
-  const { updateSearchTerm } = bindActionCreators(actions, dispatch)
+  const { updateSearch } = bindActionCreators(actions, dispatch)
   return {
-    handleChange: updateSearchTerm 
+    handleChange: updateSearch
   }
 }
 

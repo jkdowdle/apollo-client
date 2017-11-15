@@ -7,7 +7,7 @@ export const UserSearch = ({ inputVal, handleChange }) => {
       <h3>Search Users</h3>
       <DebounceInput
         minLength={1}
-        debounceTimeout={400}
+        debounceTimeout={300}
         element={'input'}
         name="searchTerm"
         onChange={handleChange}
@@ -24,11 +24,3 @@ export const UserSearch = ({ inputVal, handleChange }) => {
 }
 
 export default UserSearch
-
-// <DebounceInput
-//   minLength={2}
-//   debounceTimeout={300}
-//   placeholder="Search ..."
-//   element={Input}
-//   onChange={this.handleSearch}
-// />
