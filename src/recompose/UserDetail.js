@@ -5,17 +5,17 @@ import gql from 'graphql-tag'
 
 
 
-export const UserDetailComponent = ({ data: { loading, user: { firstName } } }) => {
+export const UserDetailComponent = ({ data: { loading, user } }) => {
   if (loading) {
     return "Loading..."
   }
   
-  // console.log(firstName && firstName)
-  /* <h2>{firstName && firstName}</h2> */
-  /* <b>{age && age}</b> */
   return (
     <div>
-      <code>{JSON.stringify(firstName)}</code>
+      <h2>{user.firstName}</h2> 
+      <b>{user.age}</b> 
+      <br />
+      <code>{JSON.stringify(user)}</code>
     </div>
   )
 }
