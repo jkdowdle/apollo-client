@@ -1,10 +1,7 @@
 import React from 'react'
 
-export const UsersList = (props) => {
-  console.log('props', props)
-  return (
-    <h5>List</h5>
-  )
-}
+import User from './User'
+
+export const UsersList = ({ data: { users, searchUsers } }) => searchUsers.map((user) => <User key={user.id} {...user} />)
 
 export default UsersList

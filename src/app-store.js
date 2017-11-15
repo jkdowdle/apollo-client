@@ -1,13 +1,6 @@
 import { createStore, combineReducers } from 'redux'
 
-const users = (state = {}, action) => {
-  switch (action.type) {
-    case '':
-      return state
-    default:
-      return state
-  }
-}
+import { users } from './redux/reducer'
 
 const reducers = combineReducers({
   users
