@@ -7,12 +7,16 @@ import {
 } from 'react-router-dom'
 
 import Users from './Users'
+import Register from './Register.container'
 
 export const Nav = () => {
   return (
     <ul style={{ display: 'flex', justifyContent: 'space-evenly' }}>
       <li>
         <Link to="/">Users</Link>
+      </li>
+      <li>
+        <Link to="/register">Register</Link>
       </li>
     </ul>
   )
@@ -24,7 +28,8 @@ export const App = () => {
       <div>
         <Nav />
         <Switch>
-          <Route path="/" component={Users} />
+          <Route exact path="/" component={Users} />
+          <Route path="/register" component={Register} />
         </Switch>
       </div>
     </Router>

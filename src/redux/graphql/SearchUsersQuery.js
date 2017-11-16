@@ -7,7 +7,12 @@ export const SearchUsersQuery = gql`
       firstName
       age
     }
+    currentUser {
+      id
+      email
+    }
   }
+
 `
 
 export default SearchUsersQuery

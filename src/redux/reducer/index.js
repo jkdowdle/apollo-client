@@ -1,21 +1,33 @@
-import { UPDATE_SEARCH } from '../actions'
+import { UPDATE_SEARCH, UPDATE_FORM } from '../actions'
 
 const defaultState = {
   searchTermInput: {
     searchTerm: '',
     orderBy: '',
+  },
+  registerForm: {
+    email: "bb@gmail.com",
+    password: "password"
   }
 }
 
 export const users = (state = defaultState, action) => {
   switch (action.type) {
     case UPDATE_SEARCH:
-      console.log('action', action)
       return {
         ...state,
         searchTermInput: {
           ...state.searchTermInput,
           [action.name]: action.value
+        }
+      }
+    case UPDATE_FORM:
+      return {
+        ...state,
+        [action.formName]: {
+          ...state[action.formName],
+          [action.name]: action.value
+
         }
       }
     default:
