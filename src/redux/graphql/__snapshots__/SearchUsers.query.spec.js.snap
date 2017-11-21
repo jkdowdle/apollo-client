@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SEACH_USERS_QUERY should match the snapshot 1`] = `
+"query SearchUsersQuery($input: SearchUser!) {
+  searchUsers(input: $input) {
+    id
+    firstName
+    age
+  }
+}
+"
+`;
