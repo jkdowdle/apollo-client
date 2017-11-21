@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { graphql } from 'react-apollo'
 import { connect } from 'react-redux'
 
+import { setToken } from '../utility'
 import * as actions from '../actions'
 import SINGUP_MUTATION from '../graphql/Signup.mutation'
 
@@ -42,12 +43,10 @@ const props = ({ mutate, ownProps: { email, password, history } }) => {
     signup(event) {
       event.preventDefault()
 
-      console.log('submitting', email, password)
-
       return mutate({
         variables: { email, password }
       })
-      .then(({ data: { signup: { jwt }}}) => localStorage.setItem('authorization', `Bearer ${jwt}`))
+      .then(({ data: { signup: { jwt }}}) => setToken(jwt))
       .then(() => console.log('redirect'))
       .catch((error) => console.error(error))
     }
