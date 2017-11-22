@@ -1,6 +1,6 @@
 import { UPDATE_SEARCH, UPDATE_FORM } from '../actions'
 
-const defaultState = {
+export const defaultState = {
   searchTermInput: {
     searchTerm: '',
     orderBy: '',
