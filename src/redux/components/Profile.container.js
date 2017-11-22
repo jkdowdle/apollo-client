@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo'
 
 import { checkAuth } from '../utility'
 import LoadingData from './LoadingData'
-import CURRENT_USER from '../graphql/CurentUser.query'
+import CURRENT_USER from '../graphql/CurrenUser.query.graphql'
 
 export const Profile = ({ data: { currentUser }}) => {
   // console.log('cur', currentUser)

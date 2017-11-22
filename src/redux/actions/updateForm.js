@@ -8,3 +8,4 @@ const updateForm = (formName) => ({ target: { value, name }}) => ({
 })
 
 export const updateRegisterForm = updateForm('registerForm')
+export const udateAddUserForm = updateForm('addUserForm')

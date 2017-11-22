@@ -9,6 +9,7 @@ import {
 import Users from './Users'
 import Register from './Register.container'
 import Profile from './Profile.container'
+import AddUser from './AddUser.container'
 
 export const Nav = () => {
   return (
@@ -35,6 +36,7 @@ export const App = () => {
           <Route exact path="/" component={Users} />
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Profile} />
+          <Route path="/add-user" component={AddUser} />
         </Switch>
       </div>
     </Router>

@@ -8,6 +8,11 @@ export const defaultState = {
   registerForm: {
     email: "bb@gmail.com",
     password: "password"
+  },
+  addUserForm: {
+    firstName: '',
+    age: ''
+
   }
 }
 
