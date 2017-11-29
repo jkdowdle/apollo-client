@@ -4,6 +4,8 @@ import registerServiceWorker from './registerServiceWorker'
 import { ApolloProvider } from 'react-apollo'
 import { Provider } from 'react-redux'
 
+import styles from './index.css'
+
 // import App from './components/App';
 import App from './redux/components/App'
 import client from './app-client';

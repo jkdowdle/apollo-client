@@ -6,8 +6,8 @@ export const defaultState = {
     orderBy: '',
   },
   registerForm: {
-    email: "bb@gmail.com",
-    password: "password"
+    email: "",
+    password: ""
   },
   addUserForm: {
     firstName: '',

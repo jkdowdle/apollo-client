@@ -2,7 +2,10 @@ import { createStore, combineReducers } from 'redux'
 
 import { users } from './redux/reducer'
 
+import { ui } from './redux/reducer/ui-reducer'
+
 const reducers = combineReducers({
+  ui,
   users
 })
 

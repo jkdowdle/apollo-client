@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddUser render should match a default snapshot 1`] = `
+<form>
+  <div>
+    <input
+      name="firstName"
+      type="text"
+    />
+  </div>
+  <div>
+    <input
+      name="age"
+      type="text"
+    />
+  </div>
+  <div>
+    <button
+      type="submit"
+    >
+      AddUSer
+    </button>
+  </div>
+</form>
+`;
+
+exports[`AddUser render should match a default snapshot 2`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <input
+      name="firstName"
+      onChange={[Function]}
+      type="text"
+      value="foo bar"
+    />
+  </div>
+  <div>
+    <input
+      name="age"
+      onChange={[Function]}
+      type="text"
+      value={1000}
+    />
+  </div>
+  <div>
+    <button
+      type="submit"
+    >
+      AddUSer
+    </button>
+  </div>
+</form>
+`;

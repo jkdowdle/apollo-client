@@ -7,7 +7,6 @@ import LoadingData from './LoadingData'
 import CURRENT_USER from '../graphql/CurrenUser.query.graphql'
 
 export const Profile = ({ data: { currentUser }}) => {
-  // console.log('cur', currentUser)
   checkAuth(localStorage.getItem('authorization'))
   return (
     <div>
