@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`works 1`] = `
+<div>
+  <ul
+    style="display:flex;justify-content:space-evenly"
+  >
+    <li>
+      <a
+        href="/"
+      >
+        Users
+      </a>
+    </li>
+    <li>
+      <a
+        href="/register"
+      >
+        Register
+      </a>
+    </li>
+    <li>
+      <a
+        href="/profile"
+      >
+        Profile
+      </a>
+    </li>
+  </ul>
+  <div>
+    <h1>
+      Users
+    </h1>
+    <div>
+      <h3>
+        Search Users
+      </h3>
+      <input
+        name="searchTerm"
+        type="text"
+        value=""
+      >
+        
+      </input>
+       Age:
+      <select
+        name="orderBy"
+      >
+        <option
+          value=""
+        >
+          Default
+        </option>
+        <option
+          value="desc"
+        >
+          Highest
+        </option>
+        <option
+          value="asc"
+        >
+          Lowest
+        </option>
+      </select>
+    </div>
+    Loading . . .
+  </div>
+</div>
+`;

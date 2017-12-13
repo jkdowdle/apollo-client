@@ -51,10 +51,11 @@ describe('UserList.container', () => {
     expect(toJson(output)).toMatchSnapshot()
   })
 
-  it('renders data', (done) => {
+  it.only('renders data', (done) => {
     
     class Container extends React.Component {
       componentWillReceiveProps({ data: { loading, searchUsers }}) {
+        // console.log('a;lsjdas;ljda;lfja;fldjas;lfjasd;fl ',loading)
         if(!loading) {
           expect(searchUsers.length).toBe(1)
           done()

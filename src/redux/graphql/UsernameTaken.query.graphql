@@ -1,0 +1,3 @@
+query UsernameTaken($value: String) {
+  usernameAvailable(value: $value)
+}

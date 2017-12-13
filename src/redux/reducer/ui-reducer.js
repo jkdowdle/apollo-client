@@ -8,7 +8,7 @@ export const defaultState = {
 
 export function ui(state = defaultState, action) {
   switch(action.type) {
-    case 'TOGGLE_LEFT_SIDEBAR': 
+    case TOGGLE_LEFT_SIDEBAR: 
       return {
         ...state,
         leftSidebar: {

@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const User = ({ firstName, age }) => {
+export const User = ({ firstName, age, handleClick = () => {} }) => {
   return (
-    <p>{firstName} - {age}</p>
+    <p onClick={handleClick}>{firstName} - {age}</p>
   )
 }
 
